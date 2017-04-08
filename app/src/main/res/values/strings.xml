@@ -3,4 +3,12 @@
     <string name="loginText">Вход в системата</string>
     <string name="username">Име</string>
     <string name="egn">ЕГН</string>
+    <string name="menu_program">Програма</string>
+    <string name="menu_my_tickets">Моите билети</string>
+    <string name="menu_discounts">Намаления</string>
+    <string name="menu_places">Места</string>
+    <string name="menu_map">Карта</string>
+    <string name="menu_contacts">Контакти</string>
+    <string name="logout">Изход</string>
+    <string name="program_activity_label">Програми</string>
 </resources>

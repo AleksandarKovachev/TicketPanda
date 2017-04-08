@@ -27,6 +27,10 @@ public class DBPref extends DBHelper {
         switch (value[0]) {
             case DBConstants.LOGIN_TABLE:
                 return this.db.query(value[0], new String[]{"_id", "name", "egn", "dateOfCreation"}, null, null, null, null, null);
+            case DBConstants.PROGRAM_TABLE:
+                return this.db.query(value[0], new String[]{"title", "smallDescription", "fullDescription",
+                                "price", "author", "actors", "director", "production", "primaryImage", "secondaryImage", "thirdImage", "bought"},
+                        null, null, null, null, null);
             default:
                 return null;
         }

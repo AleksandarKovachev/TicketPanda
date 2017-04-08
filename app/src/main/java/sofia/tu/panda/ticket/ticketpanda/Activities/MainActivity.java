@@ -1,45 +1,96 @@
 package sofia.tu.panda.ticket.ticketpanda.Activities;
 
+import android.content.Context;
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
 
-import java.util.Date;
-
+import sofia.tu.panda.ticket.ticketpanda.Constants.SharedPreferenceConstants;
 import sofia.tu.panda.ticket.ticketpanda.R;
-import sofia.tu.panda.ticket.ticketpanda.SQLite.DBConstants;
-import sofia.tu.panda.ticket.ticketpanda.SQLite.DBPref;
 
 public class MainActivity extends AppCompatActivity {
 
-    private EditText username, egn;
-    private Button login;
+    private SharedPreferences sharedPreferences;
+    private Button program;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        username = (EditText) findViewById(R.id.input_username);
-        egn = (EditText) findViewById(R.id.input_egn);
+        checkLogin();
 
-        login = (Button) findViewById(R.id.login_btn);
-
-        login.setOnClickListener(new View.OnClickListener() {
+        program = (Button) findViewById(R.id.button_program);
+        program.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (username.getText().toString().isEmpty()) {
-                    username.setError("Въведи име!");
-                } else if (egn.getText().toString().isEmpty()) {
-                    egn.setError("Въведи егн!");
-                } else {
-                    DBPref pref = new DBPref(getApplicationContext());
-                    pref.addRecord(DBConstants.LOGIN_TABLE, username.getText().toString(), egn.getText().toString(), new Date().toString());
-                    pref.close();
-                }
+                Intent intent = new Intent(getApplicationContext(), ProgramActivity.class);
+                getApplicationContext().startActivity(intent);
+                finish();
             }
         });
+    }
+
+    @Override
+    protected void onRestart() {
+        checkLogin();
+        super.onRestart();
+    }
+
+    @Override
+    protected void onResume() {
+        checkLogin();
+        super.onResume();
+    }
+
+    @Override
+    public void onBackPressed() {
+        Intent intent = new Intent(this, MainActivity.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        startActivity(intent);
+        finish();
+        super.onBackPressed();
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.main_menu, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        int id = item.getItemId();
+
+        if (id == R.id.logout) {
+            SharedPreferences pref = getSharedPreferences(SharedPreferenceConstants.LOGIN, Context.MODE_PRIVATE);
+            SharedPreferences.Editor editor = pref.edit();
+            editor.clear();
+            editor.commit();
+
+            Intent i = new Intent(this, LoginActivity.class);
+            startActivity(i);
+            finish();
+        }
+        return false;
+    }
+
+    private void checkLogin() {
+        sharedPreferences = getApplicationContext().getSharedPreferences(SharedPreferenceConstants.LOGIN, Context.MODE_PRIVATE);
+        boolean isUserLoggedIn = sharedPreferences.getBoolean(SharedPreferenceConstants.LOGIN, false);
+        String userName = sharedPreferences.getString("userName", null);
+        String userEgn = sharedPreferences.getString("userEgn", null);
+
+        if (!isUserLoggedIn) {
+            Intent intent = new Intent(this, LoginActivity.class);
+            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+            startActivity(intent);
+            finish();
+        }
     }
 }

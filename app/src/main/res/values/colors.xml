@@ -10,4 +10,11 @@
     <color name="icons">#FFFFFF</color>
     <color name="divider">#BDBDBD</color>
 
+    <color name="holo_blue">#4286f4</color>
+    <color name="holo_orange">#E65100</color>
+    <color name="holo_green">#4CAF50</color>
+    <color name="holo_red">#e53622</color>
+    <color name="holo_teal">#008080</color>
+    <color name="holo_purple">#ff6a1b9a</color>
+
 </resources>

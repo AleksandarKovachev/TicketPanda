@@ -22,13 +22,35 @@ public class DBHelper extends SQLiteOpenHelper {
             "egn text unique not null, " +
             "dateOfCreation text not null);";
 
+    private final String programTable = "create table " + DBConstants.PROGRAM_TABLE + " (" +
+            "_id integer primary key autoincrement, " +
+            "title text not null, " +
+            "smallDescription text not null, " +
+            "fullDescription text not null, " +
+            "price integer not null, " +
+            "author text not null, " +
+            "actors text not null, " +
+            "director text not null, " +
+            "production text not null, " +
+            "primaryImage integer not null, " +
+            "secondaryImage integer, " +
+            "thirdImage integer, " +
+            "bought integer default null);";
+
     @Override
     public void onCreate(SQLiteDatabase db) {
         db.execSQL(loginTable);
+
+        db.execSQL(programTable);
+        db.execSQL(DBProductions.production1);
+        db.execSQL(DBProductions.production2);
+        db.execSQL(DBProductions.production3);
+        db.execSQL(DBProductions.production4);
     }
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
+
     }
 
     public void open() throws SQLException {

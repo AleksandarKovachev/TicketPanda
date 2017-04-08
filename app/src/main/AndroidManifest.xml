@@ -8,13 +8,34 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/MyMaterialTheme">
-        <activity android:name=".Activities.MainActivity">
+        android:theme="@style/MaterialTheme">
+        <activity android:name="sofia.tu.panda.ticket.ticketpanda.Activities.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity
+            android:name="sofia.tu.panda.ticket.ticketpanda.Activities.LoginActivity"
+            android:label="Вход в системата"
+            android:theme="@style/MaterialTheme" />
+        <activity
+            android:name="sofia.tu.panda.ticket.ticketpanda.Activities.ProgramActivity"
+            android:label="@string/program_activity_label"
+            android:parentActivityName=".Activities.MainActivity"
+            android:theme="@style/MaterialTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="sofia.tu.panda.ticket.ticketpanda.Activities.MainActivity" />
+        </activity>
+        <activity
+            android:name="sofia.tu.panda.ticket.ticketpanda.Activities.ProgramItemActivity"
+            android:parentActivityName=".Activities.ProgramActivity"
+            android:theme="@style/MaterialTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="sofia.tu.panda.ticket.ticketpanda.Activities.ProgramActivity" />
         </activity>
     </application>
 
