@@ -4,356 +4,404 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:orientation="horizontal"
-        android:paddingBottom="10dp"
-        android:paddingTop="40dp">
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:scrollbars="vertical">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:padding="10dp"
-            android:text="Е" />
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
-        <Button
-            android:id="@+id/e1"
-            android:layout_width="40dp"
-            android:layout_height="40dp" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
 
-        <Button
-            android:id="@+id/e2"
-            android:layout_width="40dp"
-            android:layout_height="40dp" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:paddingBottom="10dp"
+                    android:paddingTop="20dp">
 
-        <Button
-            android:id="@+id/e3"
-            android:layout_width="40dp"
-            android:layout_height="40dp" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:text="Е" />
 
-        <Button
-            android:id="@+id/e4"
-            android:layout_width="40dp"
-            android:layout_height="40dp" />
+                    <Button
+                        android:id="@+id/e1"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp" />
 
-        <Button
-            android:id="@+id/e5"
-            android:layout_width="40dp"
-            android:layout_height="40dp" />
+                    <Button
+                        android:id="@+id/e2"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp" />
 
-        <Button
-            android:id="@+id/e6"
-            android:layout_width="40dp"
-            android:layout_height="40dp" />
+                    <Button
+                        android:id="@+id/e3"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp" />
 
-        <Button
-            android:id="@+id/e7"
-            android:layout_width="40dp"
-            android:layout_height="40dp" />
+                    <Button
+                        android:id="@+id/e4"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp" />
 
-        <Button
-            android:id="@+id/e8"
-            android:layout_width="40dp"
-            android:layout_height="40dp" />
+                    <Button
+                        android:id="@+id/e5"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:padding="10dp"
-            android:text="Е" />
-    </LinearLayout>
+                    <Button
+                        android:id="@+id/e6"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp" />
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:orientation="horizontal"
-        android:padding="10dp">
+                    <Button
+                        android:id="@+id/e7"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:padding="10dp"
-            android:text="Д" />
+                    <Button
+                        android:id="@+id/e8"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp" />
 
-        <Button
-            android:id="@+id/d1"
-            android:layout_width="40dp"
-            android:layout_height="40dp" />
+                    <Button
+                        android:id="@+id/e9"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp" />
 
-        <Button
-            android:id="@+id/d2"
-            android:layout_width="40dp"
-            android:layout_height="40dp" />
+                    <Button
+                        android:id="@+id/e10"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp" />
 
-        <Button
-            android:id="@+id/d3"
-            android:layout_width="40dp"
-            android:layout_height="40dp" />
+                    <Button
+                        android:id="@+id/e11"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp" />
 
-        <Button
-            android:id="@+id/d4"
-            android:layout_width="40dp"
-            android:layout_height="40dp" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:text="Е" />
+                </LinearLayout>
 
-        <Button
-            android:id="@+id/d5"
-            android:layout_width="40dp"
-            android:layout_height="40dp" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:padding="10dp">
 
-        <Button
-            android:id="@+id/d6"
-            android:layout_width="40dp"
-            android:layout_height="40dp" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:text="Д" />
 
-        <Button
-            android:id="@+id/d7"
-            android:layout_width="40dp"
-            android:layout_height="40dp" />
+                    <Button
+                        android:id="@+id/d1"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp" />
 
-        <Button
-            android:id="@+id/d8"
-            android:layout_width="40dp"
-            android:layout_height="40dp" />
+                    <Button
+                        android:id="@+id/d2"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:padding="10dp"
-            android:text="Д" />
-    </LinearLayout>
+                    <Button
+                        android:id="@+id/d3"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp" />
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:orientation="horizontal"
-        android:padding="10dp">
+                    <Button
+                        android:id="@+id/d4"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:padding="10dp"
-            android:text="Г" />
+                    <Button
+                        android:id="@+id/d5"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp" />
 
-        <Button
-            android:id="@+id/g1"
-            android:layout_width="40dp"
-            android:layout_height="40dp" />
+                    <Button
+                        android:id="@+id/d6"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp" />
 
-        <Button
-            android:id="@+id/g2"
-            android:layout_width="40dp"
-            android:layout_height="40dp" />
+                    <Button
+                        android:id="@+id/d7"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp" />
 
-        <Button
-            android:id="@+id/g3"
-            android:layout_width="40dp"
-            android:layout_height="40dp" />
+                    <Button
+                        android:id="@+id/d8"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp" />
 
-        <Button
-            android:id="@+id/g4"
-            android:layout_width="40dp"
-            android:layout_height="40dp" />
+                    <Button
+                        android:id="@+id/d9"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp" />
 
-        <Button
-            android:id="@+id/g5"
-            android:layout_width="40dp"
-            android:layout_height="40dp" />
+                    <Button
+                        android:id="@+id/d10"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp" />
 
-        <Button
-            android:id="@+id/g6"
-            android:layout_width="40dp"
-            android:layout_height="40dp" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:text="Д" />
+                </LinearLayout>
 
-        <Button
-            android:id="@+id/g7"
-            android:layout_width="40dp"
-            android:layout_height="40dp" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:padding="10dp">
 
-        <Button
-            android:id="@+id/g8"
-            android:layout_width="40dp"
-            android:layout_height="40dp" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:text="Г" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:padding="10dp"
-            android:text="Г" />
-    </LinearLayout>
+                    <Button
+                        android:id="@+id/g1"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp" />
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:orientation="horizontal"
-        android:padding="10dp">
+                    <Button
+                        android:id="@+id/g2"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:padding="10dp"
-            android:text="В" />
+                    <Button
+                        android:id="@+id/g3"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp" />
 
-        <Button
-            android:id="@+id/v1"
-            android:layout_width="40dp"
-            android:layout_height="40dp" />
+                    <Button
+                        android:id="@+id/g4"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp" />
 
-        <Button
-            android:id="@+id/v2"
-            android:layout_width="40dp"
-            android:layout_height="40dp" />
+                    <Button
+                        android:id="@+id/g5"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp" />
 
-        <Button
-            android:id="@+id/v3"
-            android:layout_width="40dp"
-            android:layout_height="40dp" />
+                    <Button
+                        android:id="@+id/g6"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp" />
 
-        <Button
-            android:id="@+id/v4"
-            android:layout_width="40dp"
-            android:layout_height="40dp" />
+                    <Button
+                        android:id="@+id/g7"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp" />
 
-        <Button
-            android:id="@+id/v5"
-            android:layout_width="40dp"
-            android:layout_height="40dp" />
+                    <Button
+                        android:id="@+id/g8"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp" />
 
-        <Button
-            android:id="@+id/v6"
-            android:layout_width="40dp"
-            android:layout_height="40dp" />
+                    <Button
+                        android:id="@+id/g9"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp" />
 
-        <Button
-            android:id="@+id/v7"
-            android:layout_width="40dp"
-            android:layout_height="40dp" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:text="Г" />
+                </LinearLayout>
 
-        <Button
-            android:id="@+id/v8"
-            android:layout_width="40dp"
-            android:layout_height="40dp" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:padding="10dp">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:padding="10dp"
-            android:text="В" />
-    </LinearLayout>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:text="В" />
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:orientation="horizontal"
-        android:padding="10dp">
+                    <Button
+                        android:id="@+id/v1"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:padding="10dp"
-            android:text="Б" />
+                    <Button
+                        android:id="@+id/v2"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp" />
 
-        <Button
-            android:id="@+id/b1"
-            android:layout_width="40dp"
-            android:layout_height="40dp" />
+                    <Button
+                        android:id="@+id/v3"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp" />
 
-        <Button
-            android:id="@+id/b2"
-            android:layout_width="40dp"
-            android:layout_height="40dp" />
+                    <Button
+                        android:id="@+id/v4"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp" />
 
-        <Button
-            android:id="@+id/b3"
-            android:layout_width="40dp"
-            android:layout_height="40dp" />
+                    <Button
+                        android:id="@+id/v5"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp" />
 
-        <Button
-            android:id="@+id/b4"
-            android:layout_width="40dp"
-            android:layout_height="40dp" />
+                    <Button
+                        android:id="@+id/v6"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp" />
 
-        <Button
-            android:id="@+id/b5"
-            android:layout_width="40dp"
-            android:layout_height="40dp" />
+                    <Button
+                        android:id="@+id/v7"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp" />
 
-        <Button
-            android:id="@+id/b6"
-            android:layout_width="40dp"
-            android:layout_height="40dp" />
+                    <Button
+                        android:id="@+id/v8"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp" />
 
-        <Button
-            android:id="@+id/b7"
-            android:layout_width="40dp"
-            android:layout_height="40dp" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:text="В" />
+                </LinearLayout>
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:padding="10dp"
-            android:text="Б" />
-    </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:padding="10dp">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:orientation="horizontal"
-        android:padding="10dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:text="Б" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:padding="10dp"
-            android:text="А" />
+                    <Button
+                        android:id="@+id/b1"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp" />
 
-        <Button
-            android:id="@+id/a1"
-            android:layout_width="40dp"
-            android:layout_height="40dp" />
+                    <Button
+                        android:id="@+id/b2"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp" />
 
-        <Button
-            android:id="@+id/a2"
-            android:layout_width="40dp"
-            android:layout_height="40dp" />
+                    <Button
+                        android:id="@+id/b3"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp" />
 
-        <Button
-            android:id="@+id/a3"
-            android:layout_width="40dp"
-            android:layout_height="40dp" />
+                    <Button
+                        android:id="@+id/b4"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp" />
 
-        <Button
-            android:id="@+id/a4"
-            android:layout_width="40dp"
-            android:layout_height="40dp" />
+                    <Button
+                        android:id="@+id/b5"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp" />
 
-        <Button
-            android:id="@+id/a5"
-            android:layout_width="40dp"
-            android:layout_height="40dp" />
+                    <Button
+                        android:id="@+id/b6"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp" />
 
-        <Button
-            android:id="@+id/a6"
-            android:layout_width="40dp"
-            android:layout_height="40dp" />
+                    <Button
+                        android:id="@+id/b7"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:padding="10dp"
-            android:text="А" />
-    </LinearLayout>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:text="Б" />
+                </LinearLayout>
 
-    <TextView
-        android:id="@+id/tickets_price"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:gravity="center" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:text="А" />
+
+                    <Button
+                        android:id="@+id/a1"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp" />
+
+                    <Button
+                        android:id="@+id/a2"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp" />
+
+                    <Button
+                        android:id="@+id/a3"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp" />
+
+                    <Button
+                        android:id="@+id/a4"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp" />
+
+                    <Button
+                        android:id="@+id/a5"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp" />
+
+                    <Button
+                        android:id="@+id/a6"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:text="А" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tickets_price"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center" />
+
+            </LinearLayout>
+        </HorizontalScrollView>
+    </ScrollView>
 
 </LinearLayout>
