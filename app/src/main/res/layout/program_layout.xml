@@ -70,22 +70,27 @@
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentStart="true"
                 android:layout_below="@+id/itemActors"
-                android:paddingBottom="20dp"
                 android:paddingLeft="10dp"
                 android:paddingTop="30dp" />
 
-            <TextView
-                android:id="@+id/itemPrice"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentBottom="true"
-                android:layout_below="@+id/itemActors"
-                android:layout_centerHorizontal="true"
-                android:gravity="center"
-                android:paddingBottom="20dp"
-                android:textSize="22sp" />
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/itemProduction"
+                android:padding="20dp">
 
+                <Button
+                    android:id="@+id/buy_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:background="@color/colorPrimary"
+                    android:padding="20dp"
+                    android:textColor="@android:color/white" />
+            </RelativeLayout>
         </RelativeLayout>
+
     </ScrollView>
 
 </RelativeLayout>

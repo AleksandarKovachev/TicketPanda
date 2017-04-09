@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
+import android.widget.Button;
 import android.widget.TextView;
 
 import sofia.tu.panda.ticket.ticketpanda.Adapters.SwipePageAdapter;
@@ -14,7 +15,9 @@ public class ProgramItemActivity extends AppCompatActivity {
 
     private ViewPager viewPager;
     private SwipePageAdapter swipePageAdapter;
-    private TextView title, description, author, director, actors, production, price;
+    private TextView title, description, author, director, actors, production;
+
+    private Button buy;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,7 +41,6 @@ public class ProgramItemActivity extends AppCompatActivity {
         actors = (TextView) findViewById(R.id.itemActors);
         director = (TextView) findViewById(R.id.itemDirector);
         production = (TextView) findViewById(R.id.itemProduction);
-        price = (TextView) findViewById(R.id.itemPrice);
 
         title.setText(program.getTitle());
         description.setText(program.getDescription());
@@ -46,7 +48,9 @@ public class ProgramItemActivity extends AppCompatActivity {
         director.setText("Режисьор: " + program.getDirector());
         actors.setText("Участват: " + program.getActors());
         production.setText("Дата: " + program.getProduction());
-        price.setText(program.getPrice() + " лв.");
+
+        buy = (Button) findViewById(R.id.buy_button);
+        buy.setText("КУПИ БИЛЕТ ЗА " + program.getPrice() + " лв.");
 
     }
 }

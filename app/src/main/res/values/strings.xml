@@ -11,4 +11,5 @@
     <string name="menu_contacts">Контакти</string>
     <string name="logout">Изход</string>
     <string name="program_activity_label">Програми</string>
+    <string name="numberOfTickets">Брой билети</string>
 </resources>

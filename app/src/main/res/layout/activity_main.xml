@@ -36,7 +36,7 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="0.5"
-        android:background="@color/holo_orange"
+        android:background="@color/holo_yellow"
         android:text="@string/menu_places"
         android:textColor="@android:color/white" />
 
