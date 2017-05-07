@@ -1,0 +1,35 @@
+package sofia.tu.panda.ticket.ticketpanda.Objects;
+
+public class Scene {
+
+    private int row;
+
+    private int column;
+
+    private int data;
+
+    public int getRow() {
+        return row;
+    }
+
+    public void setRow(int row) {
+        this.row = row;
+    }
+
+    public int getColumn() {
+        return column;
+    }
+
+    public void setColumn(int column) {
+        this.column = column;
+    }
+
+    public int getData() {
+        return data;
+    }
+
+    public void setData(int data) {
+        this.data = data;
+    }
+
+}

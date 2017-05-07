@@ -35,6 +35,7 @@ public class ProgramActivity extends AppCompatActivity {
         if (c.moveToFirst()) {
             do {
                 Program program = new Program();
+                program.setId(c.getInt(c.getColumnIndex("_id")));
                 program.setTitle(c.getString(c.getColumnIndex("title")));
                 program.setSmallDescription((c.getString(c.getColumnIndex("smallDescription"))));
                 program.setDescription(c.getString(c.getColumnIndex("fullDescription")));

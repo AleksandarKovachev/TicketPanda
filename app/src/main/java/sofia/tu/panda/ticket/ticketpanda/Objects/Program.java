@@ -4,6 +4,8 @@ import java.io.Serializable;
 
 public class Program implements Serializable{
 
+    private Integer id;
+
     private String title;
 
     private String smallDescription;
@@ -27,6 +29,14 @@ public class Program implements Serializable{
     private String production;
 
     private Integer bought;
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
 
     public String getTitle() {
         return title;

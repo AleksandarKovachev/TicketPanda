@@ -37,6 +37,23 @@ public class DBHelper extends SQLiteOpenHelper {
             "thirdImage integer, " +
             "bought integer default null);";
 
+    private final String sceneTable = "create table " + DBConstants.SCENE_TABLE + " (" +
+            "_id integer primary key autoincrement, " +
+            "row integer not null, " +
+            "column integer not null, " +
+            "data integer not null default 0," +
+            "programId integer not null, " +
+            "FOREIGN KEY(programId) REFERENCES program(_id) " +
+            "ON DELETE CASCADE);";
+
+    private final String myTickets = "create table " + DBConstants.MY_TICKETS + " (" +
+            "_id integer primary key autoincrement, " +
+            "row integer not null, " +
+            "column integer not null, " +
+            "programId integer not null, " +
+            "FOREIGN KEY(programId) REFERENCES program(_id) " +
+            "ON DELETE CASCADE);";
+
     @Override
     public void onCreate(SQLiteDatabase db) {
         db.execSQL(loginTable);
@@ -46,11 +63,14 @@ public class DBHelper extends SQLiteOpenHelper {
         db.execSQL(DBProductions.production2);
         db.execSQL(DBProductions.production3);
         db.execSQL(DBProductions.production4);
+
+        db.execSQL(sceneTable);
+        initScene(db);
+        db.execSQL(myTickets);
     }
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-
     }
 
     public void open() throws SQLException {
@@ -68,5 +88,17 @@ public class DBHelper extends SQLiteOpenHelper {
 
     public void close() {
         db.close();
+    }
+
+    private void initScene(SQLiteDatabase db) {
+
+        for (int programId = 1; programId < 5; programId++) {
+            for (int row = 0; row < 6; row++) {
+                for (int column = 0; column < 6; column++) {
+                    db.execSQL("INSERT INTO scene (row, column, data, programId) VALUES('" +
+                            row + "', '" + column + "', 0, '" + programId + "');");
+                }
+            }
+        }
     }
 }
