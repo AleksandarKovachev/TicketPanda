@@ -37,6 +37,14 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="sofia.tu.panda.ticket.ticketpanda.Activities.ProgramActivity" />
         </activity>
+        <activity
+            android:name="sofia.tu.panda.ticket.ticketpanda.Activities.MyTickets"
+            android:parentActivityName=".Activities.MainActivity"
+            android:theme="@style/MaterialTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="sofia.tu.panda.ticket.ticketpanda.Activities.MainActivity" />
+        </activity>
     </application>
 
 </manifest>

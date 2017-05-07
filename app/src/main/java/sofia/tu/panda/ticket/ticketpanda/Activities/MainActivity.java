@@ -16,7 +16,7 @@ import sofia.tu.panda.ticket.ticketpanda.R;
 public class MainActivity extends AppCompatActivity {
 
     private SharedPreferences sharedPreferences;
-    private Button program;
+    private Button program, myTickets;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,6 +33,16 @@ public class MainActivity extends AppCompatActivity {
                 getApplicationContext().startActivity(intent);
             }
         });
+
+        myTickets = (Button) findViewById(R.id.button_my_tickets);
+        myTickets.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), MyTickets.class);
+                getApplicationContext().startActivity(intent);
+            }
+        });
+
     }
 
     @Override

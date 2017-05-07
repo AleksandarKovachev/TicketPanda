@@ -50,6 +50,7 @@ public class DBHelper extends SQLiteOpenHelper {
             "_id integer primary key autoincrement, " +
             "row integer not null, " +
             "column integer not null, " +
+            "buyDate text not null, " +
             "programId integer not null, " +
             "FOREIGN KEY(programId) REFERENCES program(_id) " +
             "ON DELETE CASCADE);";
