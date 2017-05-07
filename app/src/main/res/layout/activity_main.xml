@@ -1,61 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:layout_height="match_parent">
 
-    <Button
-        android:id="@+id/button_program"
+    <FrameLayout
+        android:id="@+id/contentContainer"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="0.5"
-        android:background="@color/holo_teal"
-        android:text="@string/menu_program"
-        android:textColor="@android:color/white"/>
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bottomBar" />
 
-    <Button
-        android:id="@+id/button_my_tickets"
+    <com.roughike.bottombar.BottomBar
+        android:id="@+id/bottomBar"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="0.5"
-        android:background="@color/holo_blue"
-        android:text="@string/menu_my_tickets"
-        android:textColor="@android:color/white"/>
+        android:layout_height="80dp"
+        android:layout_alignParentBottom="true"
+        app:bb_tabXmlResource="@xml/bottombar_tabs"
+        app:itemBackground="@color/colorPrimary"
+        app:itemIconTint="@android:color/white"
+        app:itemTextColor="@android:color/white" />
 
-    <Button
-        android:id="@+id/button_discounts"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="0.5"
-        android:background="@color/holo_green"
-        android:text="@string/menu_discounts"
-        android:textColor="@android:color/white" />
 
-    <Button
-        android:id="@+id/button_places"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="0.5"
-        android:background="@color/holo_yellow"
-        android:text="@string/menu_places"
-        android:textColor="@android:color/white" />
-
-    <Button
-        android:id="@+id/button_map"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="0.5"
-        android:background="@color/holo_red"
-        android:text="@string/menu_map"
-        android:textColor="@android:color/white" />
-
-    <Button
-        android:id="@+id/button_contacts"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="0.5"
-        android:background="@color/holo_purple"
-        android:text="@string/menu_contacts"
-        android:textColor="@android:color/white" />
-
-</LinearLayout>
+</RelativeLayout>

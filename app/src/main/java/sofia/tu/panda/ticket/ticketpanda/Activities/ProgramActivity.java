@@ -1,11 +1,13 @@
 package sofia.tu.panda.ticket.ticketpanda.Activities;
 
-import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
+import android.support.v4.app.Fragment;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -16,20 +18,20 @@ import sofia.tu.panda.ticket.ticketpanda.R;
 import sofia.tu.panda.ticket.ticketpanda.SQLite.DBConstants;
 import sofia.tu.panda.ticket.ticketpanda.SQLite.DBPref;
 
-public class ProgramActivity extends AppCompatActivity {
+public class ProgramActivity extends Fragment {
 
     private RecyclerView recyclerView;
     private ProgramAdapter adapter;
     private List<Program> data;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_program);
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+
+        View root = inflater.inflate(R.layout.activity_program, container, false);
 
         data = new ArrayList<>();
 
-        DBPref pref = new DBPref(this);
+        DBPref pref = new DBPref(getContext());
         Cursor c = pref.getVals(DBConstants.PROGRAM_TABLE);
 
         if (c.moveToFirst()) {
@@ -55,23 +57,24 @@ public class ProgramActivity extends AppCompatActivity {
         c.close();
         pref.close();
 
-        recyclerView = (RecyclerView) findViewById(R.id.program_recycler_view);
-        adapter = new ProgramAdapter(getApplicationContext(), data);
+        recyclerView = (RecyclerView) root.findViewById(R.id.program_recycler_view);
+        adapter = new ProgramAdapter(getContext(), data);
 
-        RecyclerView.LayoutManager mLayoutManager = new GridLayoutManager(getApplicationContext(), 2);
+        RecyclerView.LayoutManager mLayoutManager = new GridLayoutManager(getContext(), 2);
         recyclerView.setLayoutManager(mLayoutManager);
         recyclerView.setHasFixedSize(true);
         recyclerView.setAdapter(adapter);
 
+        return root;
     }
 
-    @Override
-    public void onBackPressed() {
-        Intent intent = new Intent(this, MainActivity.class);
-        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-        startActivity(intent);
-        finish();
-        super.onBackPressed();
-    }
+//    @Override
+//    public void onBackPressed() {
+//        Intent intent = new Intent(this, MainActivity.class);
+//        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+//        startActivity(intent);
+//        finish();
+//        super.onBackPressed();
+//    }
 
 }

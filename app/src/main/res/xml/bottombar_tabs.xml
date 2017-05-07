@@ -1,0 +1,19 @@
+<tabs>
+    <tab
+        id="@+id/program_tab"
+        icon="@drawable/ic_program"
+        title="Програма" />
+    <tab
+        id="@+id/my_tickets_tab"
+        icon="@drawable/ic_tickets"
+        title="Моите билети" />
+    <tab
+        id="@+id/map_tab"
+        icon="@drawable/ic_map"
+        title="Карта" />
+
+    <tab
+        id="@+id/contacts_tab"
+        icon="@drawable/ic_contacts"
+        title="Контакти" />
+</tabs>
