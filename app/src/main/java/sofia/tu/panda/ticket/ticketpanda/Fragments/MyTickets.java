@@ -1,4 +1,4 @@
-package sofia.tu.panda.ticket.ticketpanda.Activities;
+package sofia.tu.panda.ticket.ticketpanda.Fragments;
 
 import android.database.Cursor;
 import android.os.Bundle;
@@ -25,7 +25,7 @@ public class MyTickets extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
-        View root = inflater.inflate(R.layout.activity_my_tickets, container, false);
+        View root = inflater.inflate(R.layout.fragment_my_tickets, container, false);
 
         data = new ArrayList<>();
 

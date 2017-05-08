@@ -16,6 +16,9 @@ import com.roughike.bottombar.BottomBar;
 import com.roughike.bottombar.OnTabSelectListener;
 
 import sofia.tu.panda.ticket.ticketpanda.Constants.SharedPreferenceConstants;
+import sofia.tu.panda.ticket.ticketpanda.Fragments.MapTab;
+import sofia.tu.panda.ticket.ticketpanda.Fragments.MyTickets;
+import sofia.tu.panda.ticket.ticketpanda.Fragments.ProgramFragment;
 import sofia.tu.panda.ticket.ticketpanda.R;
 
 public class MainActivity extends AppCompatActivity {
@@ -37,15 +40,25 @@ public class MainActivity extends AppCompatActivity {
             public void onTabSelected(@IdRes int tabId) {
                 Fragment fragment = null;
                 String title = null;
-                if (tabId == R.id.program_tab) {
-                    fragment = new ProgramActivity();
-                    title = "Програма";
-                } else if (tabId == R.id.my_tickets_tab){
-                    fragment = new MyTickets();
-                    title = "Моите билети";
+
+                switch (tabId) {
+                    case R.id.program_tab:
+                        fragment = new ProgramFragment();
+                        title = "Програма";
+                        break;
+                    case R.id.my_tickets_tab:
+                        fragment = new MyTickets();
+                        title = "Моите билети";
+                        break;
+                    case R.id.map_tab:
+                        fragment = new MapTab();
+                        title = "Карта";
+                        break;
                 }
 
-                if (fragment != null) {
+                if (fragment != null)
+
+                {
                     FragmentManager fragmentManager = getSupportFragmentManager();
                     getFragmentManager().popBackStackImmediate();
                     FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
@@ -57,24 +70,6 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
-
-//        program = (Button) findViewById(R.id.button_program);
-//        program.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Intent intent = new Intent(getApplicationContext(), ProgramActivity.class);
-//                getApplicationContext().startActivity(intent);
-//            }
-//        });
-//
-//        myTickets = (Button) findViewById(R.id.button_my_tickets);
-//        myTickets.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Intent intent = new Intent(getApplicationContext(), MyTickets.class);
-//                getApplicationContext().startActivity(intent);
-//            }
-//        });
 
     }
 
