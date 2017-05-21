@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:padding="20dp">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:gravity="center"
+            android:padding="20dp"
+            android:text="КУРСОВ ПРОЕКТ ПО ПТС"
+            android:textSize="25sp" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_below="@+id/textView"
+            android:src="@drawable/ic_contact" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView"
+            android:layout_toEndOf="@+id/imageView"
+            android:layout_toRightOf="@+id/imageView"
+            android:gravity="center"
+            android:padding="20dp"
+            android:text="Александър Николаев Ковачев\nЛуиза Георгиева Абраамян\nВанеса Йорданова Тодорова\nВасил Димитров Димитров\nГеорги Валентинов Каменов" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/textView3"
+            android:gravity="center"
+            android:padding="50dp"
+            android:text="Ticket Panda е приложение, даващо възможност за лесно и удобно разглеждане и купуване на билети за театър."
+            android:textSize="25sp" />
+    </RelativeLayout>
+
+</RelativeLayout>

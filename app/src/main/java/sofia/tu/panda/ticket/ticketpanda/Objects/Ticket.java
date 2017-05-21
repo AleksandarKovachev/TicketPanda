@@ -6,6 +6,8 @@ public class Ticket {
 
     private Integer column;
 
+    private String places;
+
     private String buyDate;
 
     private Long programId;
@@ -42,4 +44,11 @@ public class Ticket {
         this.programId = programId;
     }
 
+    public String getPlaces() {
+        return places;
+    }
+
+    public void setPlaces(String places) {
+        this.places = places;
+    }
 }

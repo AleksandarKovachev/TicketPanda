@@ -1,6 +1,7 @@
 package sofia.tu.panda.ticket.ticketpanda.Adapters;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -11,6 +12,7 @@ import android.widget.TextView;
 
 import java.util.List;
 
+import sofia.tu.panda.ticket.ticketpanda.Activities.BarCodeActivity;
 import sofia.tu.panda.ticket.ticketpanda.Objects.Program;
 import sofia.tu.panda.ticket.ticketpanda.Objects.Ticket;
 import sofia.tu.panda.ticket.ticketpanda.R;
@@ -69,29 +71,15 @@ public class MyTicketsAdapter extends RecyclerView.Adapter<MyTicketsAdapter.MyTi
         holder.projectionDate.setText(program.getProduction());
         holder.img.setImageResource(program.getPrimaryImage());
 
-        String row = null;
+        holder.cardView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(context, BarCodeActivity.class);
+                context.startActivity(intent);
+            }
+        });
 
-        switch (ticket.getRow()) {
-            case 0:
-                row = "А";
-                break;
-            case 1:
-                row = "Б";
-                break;
-            case 2:
-                row = "В";
-                break;
-            case 3:
-                row = "Г";
-                break;
-            case 4:
-                row = "Д";
-                break;
-            case 5:
-                row = "Е";
-                break;
-        }
-        holder.location.setText(row + "-" + (ticket.getColumn() + 1));
+        holder.location.setText(ticket.getPlaces());
     }
 
     @Override

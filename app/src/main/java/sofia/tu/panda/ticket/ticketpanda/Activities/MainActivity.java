@@ -16,6 +16,7 @@ import com.roughike.bottombar.BottomBar;
 import com.roughike.bottombar.OnTabSelectListener;
 
 import sofia.tu.panda.ticket.ticketpanda.Constants.SharedPreferenceConstants;
+import sofia.tu.panda.ticket.ticketpanda.Fragments.ContactsFragment;
 import sofia.tu.panda.ticket.ticketpanda.Fragments.MapTab;
 import sofia.tu.panda.ticket.ticketpanda.Fragments.MyTickets;
 import sofia.tu.panda.ticket.ticketpanda.Fragments.ProgramFragment;
@@ -53,6 +54,10 @@ public class MainActivity extends AppCompatActivity {
                     case R.id.map_tab:
                         fragment = new MapTab();
                         title = "Карта";
+                        break;
+                    case R.id.contacts_tab:
+                        fragment = new ContactsFragment();
+                        title = "Контакти";
                         break;
                 }
 

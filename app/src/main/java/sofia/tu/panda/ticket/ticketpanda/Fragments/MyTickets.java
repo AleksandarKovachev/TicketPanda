@@ -34,12 +34,19 @@ public class MyTickets extends Fragment {
 
         if (c.moveToFirst()) {
             do {
+                Long id = c.getLong(c.getColumnIndex("programId"));
                 Ticket ticket = new Ticket();
                 ticket.setRow(c.getInt(c.getColumnIndex("row")));
                 ticket.setColumn(c.getInt(c.getColumnIndex("column")));
                 ticket.setBuyDate(c.getString(c.getColumnIndex("buyDate")));
-                ticket.setProgramId(c.getLong(c.getColumnIndex("programId")));
-                data.add(ticket);
+                ticket.setProgramId(id);
+                ticket.setPlaces(takePlace(ticket));
+                Ticket existingTIcket = containsElement(id);
+                if (existingTIcket != null) {
+                    existingTIcket.setPlaces(existingTIcket.getPlaces() + ", " + ticket.getPlaces());
+                } else {
+                    data.add(ticket);
+                }
             } while (c.moveToNext());
         }
 
@@ -56,6 +63,42 @@ public class MyTickets extends Fragment {
         recyclerView.setAdapter(adapter);
 
         return root;
+    }
+
+    private Ticket containsElement(Long id) {
+        for (Ticket ticket : data) {
+            if (ticket.getProgramId() == id) {
+                return ticket;
+            }
+        }
+        return null;
+    }
+
+    private String takePlace(Ticket ticket) {
+        String row = null;
+
+        switch (ticket.getRow()) {
+            case 0:
+                row = "А";
+                break;
+            case 1:
+                row = "Б";
+                break;
+            case 2:
+                row = "В";
+                break;
+            case 3:
+                row = "Г";
+                break;
+            case 4:
+                row = "Д";
+                break;
+            case 5:
+                row = "Е";
+                break;
+        }
+
+        return (row + "-" + (ticket.getColumn() + 1));
     }
 
 }
