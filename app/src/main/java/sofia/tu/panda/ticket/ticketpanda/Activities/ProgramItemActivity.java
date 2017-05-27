@@ -119,10 +119,12 @@ public class ProgramItemActivity extends AppCompatActivity implements View.OnCli
         for (int i = 0; i < BTN_IDS.length; i++) {
             final int k = i;
             Button button = (Button) dialogView.findViewById(BTN_IDS[i]);
+
             if (scene.get(i) == 1) {
                 button.setEnabled(false);
                 button.getBackground().setColorFilter(Color.GRAY, PorterDuff.Mode.MULTIPLY);
             }
+
             button.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -139,7 +141,16 @@ public class ProgramItemActivity extends AppCompatActivity implements View.OnCli
                     int count = Collections.frequency(scene, 2);
 
                     if (count != 0) {
-                        textView.setText(count * program.getPrice() + " лева");
+                        if (count >= 3) {
+                            textView.setTextColor(Color.RED);
+                            double value = (count * (((double) program.getPrice()) * 0.9));
+                            value = Math.round(value * 100);
+                            value = value / 100;
+                            textView.setText(value + " лева");
+                        } else {
+                            textView.setTextColor(Color.BLACK);
+                            textView.setText(count * program.getPrice() + " лева");
+                        }
                     } else {
                         textView.setText("");
                     }
@@ -163,7 +174,6 @@ public class ProgramItemActivity extends AppCompatActivity implements View.OnCli
                                             "AND programId = '" + program.getId() + "';";
                                     pref.execSql(sql);
                                 }
-
                                 pref.close();
                             }
                         })
